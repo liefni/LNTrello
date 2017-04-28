@@ -1,0 +1,25 @@
+﻿@using LNTrello.Models
+@model CommentModel
+@{
+    ViewBag.Title = "Add Comment to " + ViewBag.CardName;
+}
+
+@using (Html.BeginForm("AddComment", "Cards", new { id = ViewBag.Id }, FormMethod.Post, new { role = "form" }))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2>@Html.DisplayText("CardName") - New Comment</h2>
+        </div>
+        <div class="panel-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.TextAreaFor(m => m.Comment)
+            @Html.ValidationMessageFor(m => m.Comment, "", new { @class = "text-danger" })
+        
+            <div class="form-button-container">
+                <button class="btn btn-lg btn-default" onclick="window.location.href='/Cards/Card/@Html.DisplayText("Id")'" type="button">Cancel</button>
+                <button class="btn btn-lg btn-default" type="submit">Add Comment</button>
+            </div>
+        </div>
+    </div>
+}
+

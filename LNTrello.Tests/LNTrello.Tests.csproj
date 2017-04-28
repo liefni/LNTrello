@@ -82,8 +82,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AuthenticationControllerTests.cs" />
+    <Compile Include="Controllers\CardsControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\HomeControllerTest.cs" />
+    <Compile Include="TestRepositories\CardTestRepository.cs" />
+    <Compile Include="TestRepositories\CommentTestRepository.cs" />
+    <Compile Include="TestServiceManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -97,6 +101,7 @@
       <Name>LNTrello</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,0 +1,28 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>LNTrello</title>
+
+</head>
+
+<body>
+  <div>
+	<p>Please allow access for LNTrello and paste the token into the textbox below</p>
+	<input type="text"></input>
+  </div>
+    
+    <a href="https://trello.com/1/authorize?scope=read,write&expiration=never&name=LNTrello&key=a3e16400966567f857abd863e1325efc" 
+       onclick="return popitup('https://trello.com/1/authorize?scope=read,write&expiration=never&name=LNTrello&key=a3e16400966567f857abd863e1325efc')">Click here to login</a>
+    
+    <script>
+function popitup(url) {
+        newwindow=window.open(url,'name','height=600,width=400');
+        if (window.focus) {newwindow.focus()}
+        return false;
+    }
+    </script>
+</body>
+</html>

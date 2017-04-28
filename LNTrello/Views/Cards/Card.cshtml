@@ -1,0 +1,24 @@
+﻿@using LNTrello.Models
+@model CardModel
+@{
+    ViewBag.Title = "Card";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>@Html.DisplayTextFor(m => m.Name)</h2>
+    </div>
+    <div class="panel-body">
+        <h3 class="section-heading">Comments</h3>
+        @foreach (var comment in Model.Comments)
+        {
+            <p class="comment">@Html.DisplayTextFor(m => comment.Comment)</p>
+        }
+        <div class="form-button-container">
+            <button class="btn btn-lg btn-default" onclick="window.location.href='/Cards/AddComment/@Html.DisplayTextFor(m => m.Id)'" type="button">Add Comment</button>
+        </div>
+    </div>
+</div>
+
+
+

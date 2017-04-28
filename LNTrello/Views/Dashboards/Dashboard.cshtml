@@ -1,0 +1,17 @@
+﻿@using LNTrello.Models
+@model DashboardModel
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>@Html.DisplayTextFor(m => m.Name)</h2>
+    </div>
+    <div class="panel-body">
+        @foreach (var card in Model.Cards)
+        {
+            <a href="/Cards/Card/@Html.DisplayTextFor(m => card.Id)" class="block-item">@Html.DisplayTextFor(m => card.Name)</a>
+        }
+    </div>
+</div>
